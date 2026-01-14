@@ -23,8 +23,6 @@ A modern, interactive calculator built using HTML, CSS, and JavaScript with supp
 🔹 Project Structure
 
 Task1_Calculator
-
-Task1_Calculator
 │── index.html
 │── style.css
 │── script.js
