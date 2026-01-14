@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TODO App - Task Manager</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <!-- Font Awesome for icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <div class="container">
+        <!-- Header -->
+        <header class="header">
+            <h1><i class="fas fa-tasks"></i> My TODO List</h1>
+            <p class="subtitle">Stay organized, stay productive</p>
+        </header>
+
+        <!-- Task Input Section -->
+        <div class="input-section">
+            <div class="input-wrapper">
+                <input 
+                    type="text" 
+                    id="taskInput" 
+                    placeholder="Add a new task..." 
+                    maxlength="200"
+                >
+                <button id="addTaskBtn" class="add-btn">
+                    <i class="fas fa-plus"></i> Add Task
+                </button>
+            </div>
+        </div>
+
+        <!-- Filter Tabs -->
+        <div class="filter-tabs">
+            <button class="filter-btn active" data-filter="all">
+                <i class="fas fa-list"></i> All Tasks (<span id="allCount">0</span>)
+            </button>
+            <button class="filter-btn" data-filter="pending">
+                <i class="fas fa-clock"></i> Pending (<span id="pendingCount">0</span>)
+            </button>
+            <button class="filter-btn" data-filter="completed">
+                <i class="fas fa-check-circle"></i> Completed (<span id="completedCount">0</span>)
+            </button>
+        </div>
+
+        <!-- Tasks Container -->
+        <div class="tasks-container">
+            <!-- All Tasks Section -->
+            <div class="tasks-section active" id="allTasks">
+                <h2 class="section-title">
+                    <i class="fas fa-list-ul"></i> All Tasks
+                </h2>
+                <ul class="task-list" id="allTasksList">
+                    <!-- Tasks will be dynamically added here -->
+                </ul>
+                <div class="empty-state" id="allEmpty">
+                    <i class="fas fa-inbox"></i>
+                    <p>No tasks yet. Add one to get started!</p>
+                </div>
+            </div>
+
+            <!-- Pending Tasks Section -->
+            <div class="tasks-section" id="pendingTasks">
+                <h2 class="section-title">
+                    <i class="fas fa-hourglass-half"></i> Pending Tasks
+                </h2>
+                <ul class="task-list" id="pendingTasksList">
+                    <!-- Pending tasks will be added here -->
+                </ul>
+                <div class="empty-state" id="pendingEmpty">
+                    <i class="fas fa-check-double"></i>
+                    <p>No pending tasks. Great job!</p>
+                </div>
+            </div>
+
+            <!-- Completed Tasks Section -->
+            <div class="tasks-section" id="completedTasks">
+                <h2 class="section-title">
+                    <i class="fas fa-check-circle"></i> Completed Tasks
+                </h2>
+                <ul class="task-list" id="completedTasksList">
+                    <!-- Completed tasks will be added here -->
+                </ul>
+                <div class="empty-state" id="completedEmpty">
+                    <i class="fas fa-tasks"></i>
+                    <p>No completed tasks yet. Keep going!</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Clear All Button -->
+        <div class="clear-section">
+            <button id="clearAllBtn" class="clear-btn">
+                <i class="fas fa-trash-alt"></i> Clear All Completed Tasks
+            </button>
+        </div>
+    </div>
+
+    <!-- Edit Modal -->
+    <div class="modal" id="editModal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h3><i class="fas fa-edit"></i> Edit Task</h3>
+                <button class="close-btn" id="closeModal">
+                    <i class="fas fa-times"></i>
+                </button>
+            </div>
+            <div class="modal-body">
+                <input 
+                    type="text" 
+                    id="editInput" 
+                    placeholder="Edit your task..."
+                    maxlength="200"
+                >
+            </div>
+            <div class="modal-footer">
+                <button class="btn-cancel" id="cancelEdit">Cancel</button>
+                <button class="btn-save" id="saveEdit">
+                    <i class="fas fa-save"></i> Save Changes
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
