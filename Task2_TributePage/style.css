@@ -1,0 +1,302 @@
+/* Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    color: #333;
+    line-height: 1.6;
+}
+
+.container {
+    max-width: 900px;
+    margin: 30px auto;
+    background: white;
+    border-radius: 15px;
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.3);
+    overflow: hidden;
+}
+
+/* Header */
+.hero {
+    background: linear-gradient(135deg, #1e3c72 0%, #2a5298 100%);
+    color: white;
+    text-align: center;
+    padding: 40px 20px;
+}
+
+.main-title {
+    font-family: 'Playfair Display', serif;
+    font-size: 2.5em;
+    font-weight: 700;
+    margin-bottom: 10px;
+}
+
+.subtitle {
+    font-size: 1.2em;
+    font-style: italic;
+    margin-bottom: 8px;
+}
+
+.dates {
+    font-size: 1em;
+    opacity: 0.9;
+}
+
+/* Image Section */
+.img-section {
+    text-align: center;
+    padding: 30px 20px;
+    background: #f8f9fa;
+}
+
+.img-section img {
+    width: 100%;
+    max-width: 350px;
+    height: auto;
+    border-radius: 10px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+}
+
+.img-caption {
+    margin-top: 15px;
+    font-style: italic;
+    color: #666;
+    font-size: 0.9em;
+    padding: 0 20px;
+}
+
+/* Sections */
+section {
+    padding: 35px 30px;
+}
+
+.section-title {
+    font-family: 'Playfair Display', serif;
+    color: #1e3c72;
+    font-size: 1.8em;
+    margin-bottom: 20px;
+    text-align: center;
+    position: relative;
+    padding-bottom: 10px;
+}
+
+.section-title::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 60px;
+    height: 3px;
+    background: linear-gradient(to right, #667eea, #764ba2);
+}
+
+/* Biography */
+.bio-section {
+    background: white;
+}
+
+.bio-section p {
+    margin-bottom: 15px;
+    text-align: justify;
+    color: #555;
+}
+
+/* Achievements */
+.achievements-section {
+    background: #f8f9fa;
+}
+
+.achievements-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+    margin-top: 25px;
+}
+
+.achievement-card {
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+    border-left: 4px solid #667eea;
+}
+
+.achievement-card:hover {
+    transform: translateY(-5px);
+}
+
+.achievement-icon {
+    font-size: 2em;
+    margin-bottom: 10px;
+}
+
+.achievement-card h3 {
+    color: #1e3c72;
+    margin-bottom: 10px;
+    font-size: 1.1em;
+}
+
+.achievement-card p {
+    color: #666;
+    font-size: 0.9em;
+}
+
+/* Quote Section */
+.quote-section {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    color: white;
+    text-align: center;
+    padding: 50px 30px;
+}
+
+.main-quote {
+    font-family: 'Playfair Display', serif;
+    font-size: 1.4em;
+    font-style: italic;
+    margin-bottom: 15px;
+    line-height: 1.6;
+}
+
+.quote-author {
+    font-size: 1.1em;
+    font-weight: 600;
+}
+
+/* Quotes Grid */
+.quotes-grid-section {
+    background: white;
+}
+
+.quotes-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 15px;
+    margin-top: 20px;
+}
+
+.quote-card {
+    background: #f8f9fa;
+    padding: 18px;
+    border-radius: 8px;
+    border-top: 3px solid #667eea;
+}
+
+.quote-card p {
+    font-style: italic;
+    color: #555;
+    font-size: 0.9em;
+}
+
+/* Admiration */
+.admiration-section {
+    background: #f8f9fa;
+}
+
+.admiration-section p {
+    margin-bottom: 15px;
+    text-align: justify;
+    color: #555;
+}
+
+/* Legacy */
+.legacy-section {
+    background: white;
+}
+
+.legacy-list {
+    list-style: none;
+    margin-top: 20px;
+}
+
+.legacy-list li {
+    padding: 15px;
+    margin: 10px 0;
+    background: #f8f9fa;
+    border-left: 4px solid #667eea;
+    border-radius: 6px;
+    color: #555;
+    position: relative;
+    padding-left: 40px;
+}
+
+.legacy-list li::before {
+    content: '✓';
+    position: absolute;
+    left: 15px;
+    color: #667eea;
+    font-weight: bold;
+}
+
+/* Footer */
+.footer {
+    background: linear-gradient(135deg, #1e3c72 0%, #2a5298 100%);
+    color: white;
+    text-align: center;
+    padding: 30px 20px;
+}
+
+.footer-quote {
+    font-family: 'Playfair Display', serif;
+    font-size: 1.2em;
+    font-style: italic;
+    margin-bottom: 15px;
+}
+
+.footer-text {
+    margin-bottom: 10px;
+}
+
+.footer a {
+    color: #ffd700;
+    text-decoration: none;
+    font-weight: 600;
+}
+
+.footer a:hover {
+    text-decoration: underline;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .container {
+        margin: 20px;
+    }
+    
+    .main-title {
+        font-size: 2em;
+    }
+    
+    .hero {
+        padding: 30px 20px;
+    }
+    
+    section {
+        padding: 25px 20px;
+    }
+    
+    .section-title {
+        font-size: 1.5em;
+    }
+    
+    .achievements-grid,
+    .quotes-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (max-width: 480px) {
+    .main-title {
+        font-size: 1.8em;
+    }
+    
+    .img-section img {
+        max-width: 280px;
+    }
+}
